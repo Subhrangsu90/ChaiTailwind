@@ -4,6 +4,35 @@ A lightweight utility-first CSS engine that provides shorthand class names mappe
 
 ---
 
+## 📦 Installation
+
+### npm
+
+```bash
+npm install @brewcodex/chai-css
+```
+
+```js
+import "@brewcodex/chai-css"; // Auto-initializes on DOM ready
+// Or for manual control:
+import chaiEngine from "@brewcodex/chai-css";
+chaiEngine.init();
+```
+
+### CDN (unpkg / jsDelivr)
+
+Add before `</body>`:
+
+```html
+<script src="https://unpkg.com/@brewcodex/chai-css"></script>
+<!-- or -->
+<script src="https://cdn.jsdelivr.net/npm/@brewcodex/chai-css"></script>
+```
+
+The script auto-initializes when the DOM is ready. Exposes `window.ChaiTailwind` for manual `init()` if needed.
+
+---
+
 ## 📚 Complete Utilities Documentation
 
 ### 1. 🎨 **TYPOGRAPHY** (`typography.js`)

@@ -1,14 +1,34 @@
 {
-  "name": "chaitailwind",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^8.0.1"
-  }
+	"name": "@brewcodex/chai-css",
+	"version": "1.0.0",
+	"description": "A lightweight utility-first CSS engine with shorthand class names and 16px base scale",
+	"type": "module",
+	"main": "./dist/chaitailwind.esm.js",
+	"module": "./dist/chaitailwind.esm.js",
+	"exports": {
+		".": "./dist/chaitailwind.esm.js"
+	},
+	"unpkg": "./dist/chaitailwind.iife.js",
+	"jsdelivr": "./dist/chaitailwind.iife.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepublishOnly": "npm run build"
+	},
+"keywords": [
+    "brewcodex",
+    "css",
+    "utility",
+    "tailwind",
+    "utility-first",
+    "styling"
+  ],
+	"license": "MIT",
+	"devDependencies": {
+		"vite": "^8.0.1"
+	}
 }
