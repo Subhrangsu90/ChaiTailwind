@@ -7,10 +7,8 @@ export const typography = {
 	leading: "lineHeight",
 	tracking: "letterSpacing",
 
-	uppercase: "textTransform",
-	lowercase: "textTransform",
-	capitalize: "textTransform",
-	italic: "fontStyle",
 	decoration: "textDecorationLine",
 	family: "fontFamily",
+	transform: "textTransform",
+	style: "fontStyle",
 };

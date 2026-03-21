@@ -1,7 +1,8 @@
 export const layout = {
 	// Display & Visibility
 	display: "display",
-	visible: "visibility",
+	visibility: "visibility",
+	"box-sizing": "boxSizing",
 
 	// Positioning
 	pos: "position",
@@ -20,4 +21,8 @@ export const layout = {
 
 	// Object Fit
 	object: "objectFit",
+
+	// Interaction
+	cursor: "cursor",
+	transition: "transition",
 };

@@ -18,10 +18,10 @@ Text styling and font utilities. Use `chai-` prefix with any of these properties
 | `weight`     | `fontWeight`         | `chai-weight-bold`, `chai-weight-normal`                    | String keyword           |
 | `leading`    | `lineHeight`         | `chai-leading-[1.5]`                                        | Custom value in brackets |
 | `tracking`   | `letterSpacing`      | `chai-tracking-[0.05em]`                                    | Custom value in brackets |
-| `uppercase`  | `textTransform`      | `chai-uppercase`                                            | Implicit value           |
-| `lowercase`  | `textTransform`      | `chai-lowercase`                                            | Implicit value           |
-| `capitalize` | `textTransform`      | `chai-capitalize`                                           | Implicit value           |
-| `italic`     | `fontStyle`          | `chai-italic`                                               | Implicit value           |
+| `transform`  | `textTransform`      | `chai-transform-uppercase`                                  | Implicit value           |
+| `transform`  | `textTransform`      | `chai-transform-lowercase`                                  | Implicit value           |
+| `transform`  | `textTransform`      | `chai-transform-capitalize`                                 | Implicit value           |
+| `style`      | `fontStyle`          | `chai-style-italic`                                         | Implicit value           |
 | `decoration` | `textDecorationLine` | `chai-decoration-underline`, `chai-decoration-line-through` | String keyword           |
 | `family`     | `fontFamily`         | `chai-family-[Arial]`                                       | Custom value in brackets |
 
@@ -79,20 +79,20 @@ Dimension utilities for width, height, and constraints.
 
 Display, positioning, and visibility utilities for page layout and component positioning.
 
-| Utility      | CSS Property | Example                                          | Usage                       |
-| ------------ | ------------ | ------------------------------------------------ | --------------------------- |
-| `display`    | `display`    | `chai-display-flex`, `chai-display-block`        | String keyword              |
-| `visible`    | `visibility` | `chai-visible`, `chai-invisible`                 | String keyword              |
-| `pos`        | `position`   | `chai-pos-absolute`, `chai-pos-relative`         | String keyword              |
-| `top`        | `top`        | `chai-top-0`, `chai-top-[20px]`                  | Numeric (→ REM) or brackets |
-| `right`      | `right`      | `chai-right-0`, `chai-right-[15px]`              | Numeric (→ REM) or brackets |
-| `bottom`     | `bottom`     | `chai-bottom-0`, `chai-bottom-[10px]`            | Numeric (→ REM) or brackets |
-| `left`       | `left`       | `chai-left-0`, `chai-left-[25px]`                | Numeric (→ REM) or brackets |
-| `z`          | `zIndex`     | `chai-z-10`, `chai-z-50`, `chai-z-[999]`         | Numeric or brackets         |
-| `overflow`   | `overflow`   | `chai-overflow-hidden`, `chai-overflow-auto`     | String keyword              |
-| `overflow-x` | `overflowX`  | `chai-overflow-x-hidden`, `chai-overflow-x-auto` | String keyword              |
-| `overflow-y` | `overflowY`  | `chai-overflow-y-hidden`, `chai-overflow-y-auto` | String keyword              |
-| `object`     | `objectFit`  | `chai-object-cover`, `chai-object-contain`       | String keyword              |
+| Utility      | CSS Property | Example                                                | Usage                       |
+| ------------ | ------------ | ------------------------------------------------------ | --------------------------- |
+| `display`    | `display`    | `chai-display-flex`, `chai-display-block`              | String keyword              |
+| `visibility` | `visibility` | `chai-visibility-visible`, `chai-visibility-invisible` | String keyword              |
+| `pos`        | `position`   | `chai-pos-absolute`, `chai-pos-relative`               | String keyword              |
+| `top`        | `top`        | `chai-top-0`, `chai-top-[20px]`                        | Numeric (→ REM) or brackets |
+| `right`      | `right`      | `chai-right-0`, `chai-right-[15px]`                    | Numeric (→ REM) or brackets |
+| `bottom`     | `bottom`     | `chai-bottom-0`, `chai-bottom-[10px]`                  | Numeric (→ REM) or brackets |
+| `left`       | `left`       | `chai-left-0`, `chai-left-[25px]`                      | Numeric (→ REM) or brackets |
+| `z`          | `zIndex`     | `chai-z-10`, `chai-z-50`, `chai-z-[999]`               | Numeric or brackets         |
+| `overflow`   | `overflow`   | `chai-overflow-hidden`, `chai-overflow-auto`           | String keyword              |
+| `overflow-x` | `overflowX`  | `chai-overflow-x-hidden`, `chai-overflow-x-auto`       | String keyword              |
+| `overflow-y` | `overflowY`  | `chai-overflow-y-hidden`, `chai-overflow-y-auto`       | String keyword              |
+| `object`     | `objectFit`  | `chai-object-cover`, `chai-object-contain`             | String keyword              |
 
 **Examples:**
 

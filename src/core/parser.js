@@ -5,6 +5,9 @@ export const parseChaiClass = (className) => {
 	const parts = className.replace("chai-", "").split("-");
 
 	const twoPartKey = `${parts[0]}-${parts[1]}`;
+
+	console.log("Two parts:", twoPartKey);
+
 	if (utilityMap[twoPartKey]) {
 		return {
 			propKey: twoPartKey,
