@@ -1,15 +1,19 @@
 {
 	"name": "@brewcodex/chai-css",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "A lightweight utility-first CSS engine with shorthand class names and 16px base scale",
 	"type": "module",
 	"main": "./dist/chaitailwind.esm.js",
 	"module": "./dist/chaitailwind.esm.js",
 	"exports": {
-		".": "./dist/chaitailwind.esm.js"
+		".": {
+			"import": "./dist/chaitailwind.esm.js",
+			"default": "./dist/chaitailwind.iife.js"
+		}
 	},
 	"unpkg": "./dist/chaitailwind.iife.js",
 	"jsdelivr": "./dist/chaitailwind.iife.js",
+	"browser": "./dist/chaitailwind.iife.js",
 	"files": [
 		"dist"
 	],

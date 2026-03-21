@@ -24,7 +24,7 @@ chaiEngine.init();
 Add before `</body>`:
 
 ```html
-<script src="https://unpkg.com/@brewcodex/chai-css"></script>
+<script src="https://cdn.jsdelivr.net/npm/@brewcodex/chai-css@1"></script>
 <!-- or -->
 <script src="https://cdn.jsdelivr.net/npm/@brewcodex/chai-css"></script>
 ```
@@ -454,7 +454,7 @@ Examples:
 
 - `chai-min-w-[300px]` → `minWidth: 300px`
 - `chai-p-[1.5em]` → `padding: 1.5em`
-  <!-- - `chai-top-[calc(100% - 20px)]` → `top: calc(100% - 20px)` -->
+      <!-- - `chai-top-[calc(100% - 20px)]` → `top: calc(100% - 20px)` -->
 
 ---
 
