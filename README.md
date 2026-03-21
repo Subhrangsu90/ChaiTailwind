@@ -184,12 +184,13 @@ Background color utilities with hex color support.
 
 Border styling utilities for width, color, style, and radius.
 
-| Utility   | CSS Property   | Example                              | Usage                       |
-| --------- | -------------- | ------------------------------------ | --------------------------- |
-| `bw`      | `borderWidth`  | `chai-bw-1`, `chai-bw-2`             | Numeric (→ REM)             |
-| `bc`      | `borderColor`  | `chai-bc-[#ccc]`                     | Hex color in brackets       |
-| `bs`      | `borderStyle`  | `chai-bs-solid`, `chai-bs-dashed`    | String keyword              |
-| `rounded` | `borderRadius` | `chai-rounded-8`, `chai-rounded-50p` | Numeric (→ REM) or `p` (→%) |
+| Utility           | CSS Property     | Example                              | Usage                       |
+| ----------------- | ---------------- | ------------------------------------ | --------------------------- |
+| `bw`              | `borderWidth`    | `chai-bw-1`, `chai-bw-2`             | Numeric (→ REM)             |
+| `bc`              | `borderColor`    | `chai-bc-[#ccc]`                     | Hex color in brackets       |
+| `bs`              | `borderStyle`    | `chai-bs-solid`, `chai-bs-dashed`    | String keyword              |
+| `rounded`         | `borderRadius`   | `chai-rounded-8`, `chai-rounded-50p` | Numeric (→ REM) or `p` (→%) |
+| `border-collapse` | `borderCollapse` | `chai-border-collapse`               | String keyword              |
 
 **Examples:**
 
@@ -220,6 +221,8 @@ Flex layout utilities for alignment, direction, sizing, and spacing.
 | ---------- | --------------- | ------------------------------------ | ----------------------- |
 | `flex-row` | `flexDirection` | `chai-flex-row`                      | Row direction (default) |
 | `flex-col` | `flexDirection` | `chai-flex-col`                      | Column direction        |
+| `flex-row` | `flexDirection` | `chai-flex-row-reverse`              | Row direction recerse   |
+| `flex-col` | `flexDirection` | `chai-flex-col-reverse`              | Row direction recerse   |
 | `wrap`     | `flexWrap`      | `chai-wrap-wrap`, `chai-wrap-nowrap` | Wrapping behavior       |
 
 #### Alignment

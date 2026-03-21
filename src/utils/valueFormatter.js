@@ -6,6 +6,7 @@ import {
 	toPercentage,
 	pxToRem,
 	hasBrackets,
+	isREMKey,
 } from "./helpers.js";
 
 export const formatValue = (value, propKey) => {
@@ -20,6 +21,7 @@ export const formatValue = (value, propKey) => {
 	// 3. Handle Viewport Units (e.g., chai-h-100vh -> 100vh)
 	if (isViewport(value)) return value;
 
+	// 4. Flex direction helpers
 	if (propKey === "flex-row")
 		return value === "reverse" ? "row-reverse" : "row";
 	if (propKey === "flex-col")
@@ -29,38 +31,12 @@ export const formatValue = (value, propKey) => {
 				: "column"
 			: "column";
 
-	// 4. The REM Engine
-	const remKeys = [
-		"p",
-		"m",
-		"fs",
-		"rounded",
-		"gap",
-		"w",
-		"h",
-		"min-w",
-		"min-h",
-		"max-w",
-		"max-h",
-		"pt",
-		"pb",
-		"pl",
-		"pr",
-		"px",
-		"py",
-		"mt",
-		"mb",
-		"ml",
-		"mr",
-		"mx",
-		"my",
-		"bw",
-	];
-	if (!isNaN(value) && remKeys.includes(propKey)) return pxToRem(value);
+	// 5. Convert numeric values to rem for supported keys
+	if (!isNaN(value) && isREMKey(propKey)) return pxToRem(value);
 
-	// 5. Handle custom values in brackets (e.g., [300px], [1.5em])
+	// 6. Handle custom values in brackets (e.g., [300px], [1.5em])
 	if (hasBrackets(value)) return stripBrackets(value);
 
-	// 6. Fallback for strings (e.g., chai-align-center)
+	// 7. Fallback for strings (e.g., chai-align-center)
 	return value;
 };

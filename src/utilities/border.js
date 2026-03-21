@@ -3,4 +3,5 @@ export const border = {
 	bc: "borderColor",
 	bs: "borderStyle",
 	rounded: "borderRadius",
+	"border-collapse": "borderCollapse",
 };
