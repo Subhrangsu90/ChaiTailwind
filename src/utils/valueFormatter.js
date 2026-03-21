@@ -5,6 +5,7 @@ import {
 	stripBrackets,
 	toPercentage,
 	pxToRem,
+	hasBrackets,
 } from "./helpers.js";
 
 export const formatValue = (value, propKey) => {
@@ -34,18 +35,32 @@ export const formatValue = (value, propKey) => {
 		"m",
 		"fs",
 		"rounded",
+		"gap",
 		"w",
 		"h",
-		"gap",
+		"min-w",
+		"min-h",
+		"max-w",
+		"max-h",
 		"pt",
 		"pb",
-		"mt",
-		"mb",
+		"pl",
+		"pr",
 		"px",
 		"py",
+		"mt",
+		"mb",
+		"ml",
+		"mr",
+		"mx",
+		"my",
+		"bw",
 	];
 	if (!isNaN(value) && remKeys.includes(propKey)) return pxToRem(value);
 
-	// 5. Fallback for strings (e.g., chai-align-center)
+	// 5. Handle custom values in brackets (e.g., [300px], [1.5em])
+	if (hasBrackets(value)) return stripBrackets(value);
+
+	// 6. Fallback for strings (e.g., chai-align-center)
 	return value;
 };

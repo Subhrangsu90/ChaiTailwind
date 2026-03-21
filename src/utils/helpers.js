@@ -28,3 +28,8 @@ export const toPercentage = (str) => {
 export const isHex = (str) => {
 	return str.startsWith("#") || (str.startsWith("[#") && str.endsWith("]"));
 };
+
+// 6. Check if value has brackets (custom value)
+export const hasBrackets = (str) => {
+	return typeof str === "string" && str.startsWith("[") && str.endsWith("]");
+};
