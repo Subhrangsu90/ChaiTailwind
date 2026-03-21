@@ -1,0 +1,3588 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet" />
+		<title>ChaiCSS - Complete Documentation | BrewCodex</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+
+	<body
+		class="chai-bg-[#0a0a0a] chai-text-[#e5e5e5] chai-family-inter chai-m-0 chai-p-0 chai-leading-[1.6]">
+		<!-- Main Layout Container -->
+		<div class="chai-display-flex chai-w-100p chai-min-h-100vh">
+			<!-- Sidebar -->
+			<aside
+				class="chai-pos-fixed chai-left-0 chai-top-0 chai-w-300 chai-h-100vh chai-bg-[#111] chai-bw-1 chai-bc-[#262626] chai-bs-solid chai-overflow-y-auto chai-p-24 chai-z-50">
+				<div
+					class="chai-mb-24 chai-pb-16 chai-bw-0 chai-bb-1 chai-bc-[#262626] chai-bs-solid">
+					<a
+						href="../index.html"
+						class="chai-fs-12 chai-text-[#78716c] chai-decoration-none chai-display-block chai-mb-12">
+						← Back to ChaiCSS
+					</a>
+
+					<h2
+						class="chai-fs-20 chai-weight-bold chai-m-0 chai-text-[#fff]">
+						ChaiCSS Docs
+					</h2>
+
+					<p
+						class="chai-fs-13 chai-m-0 chai-mt-8 chai-text-[#bb4d00]">
+						Utility-first CSS • 16px REM Base
+					</p>
+				</div>
+
+				<div class="chai-display-flex chai-flex-col chai-gap-8">
+					<a
+						href="#quick-start"
+						class="chai-fs-14 chai-text-[#fff] chai-bg-[#1a1a1a] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						🚀 Quick Start
+					</a>
+					<a
+						href="#typography"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						🎨 Typography
+					</a>
+					<a
+						href="#sizing"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						📏 Sizing
+					</a>
+					<a
+						href="#layout"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						📐 Layout
+					</a>
+					<a
+						href="#spacing"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						📦 Spacing
+					</a>
+					<a
+						href="#background"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						🎨 Background
+					</a>
+					<a
+						href="#border"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						🔲 Border
+					</a>
+					<a
+						href="#flexbox"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						🔄 Flexbox
+					</a>
+					<a
+						href="#value-formatting"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						🎯 Value Format
+					</a>
+					<a
+						href="#rem-scale"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						📊 REM Scale
+					</a>
+					<a
+						href="#examples"
+						class="chai-fs-14 chai-text-[#a3a3a3] chai-decoration-none chai-px-12 chai-py-8 chai-rounded-8">
+						🧪 Examples
+					</a>
+				</div>
+			</aside>
+
+			<!-- Main Section -->
+			<div
+				class="chai-display-flex chai-flex-col chai-flex-1 chai-ml-300">
+				<!-- Header -->
+				<header
+					class="chai-pos-fixed chai-top-0 chai-left-300 chai-right-0 chai-bg-[#0d0d0d] chai-text-[#fff] chai-p-16 chai-z-50 chai-display-flex chai-flex-col chai-justify-center chai-items-center chai-bw-0 chai-bs-solid"
+					style="
+						width: calc(100% - 18.75rem);
+						border-bottom: 1px solid #262626;
+					">
+					<div
+						class="chai-display-flex chai-flex-col chai-gap-4 chai-align-center">
+						<h1 class="chai-fs-32 chai-weight-bold chai-m-0">
+							ChaiCSS
+						</h1>
+						<p class="chai-fs-13 chai-m-0 chai-text-[#78716c]">
+							Complete Utility Documentation
+						</p>
+					</div>
+				</header>
+
+				<!-- Main Content -->
+				<main class="chai-flex-1 chai-p-32 chai-mt-120">
+					<div
+						class="section chai-max-w-[1200px] chai-my-0 chai-mx-auto">
+						<section
+							id="quick-start"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-16 chai-mb-40 chai-bw-1 chai-bc-[#262626] chai-bs-solid">
+							<p
+								class="chai-fs-12 chai-text-[#78716c] chai-transform-uppercase chai-tracking-[0.12em] chai-m-0 chai-mb-8">
+								Get started
+							</p>
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+								🚀 Quick Start
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#a3a3a3] chai-mb-16">
+								Add the script, then start writing shorthand
+								utility classes directly in your HTML.
+							</p>
+
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-12 chai-bw-1 chai-bc-[#222] chai-bs-solid">
+								<p
+									class="chai-fs-12 chai-text-[#78716c] chai-transform-uppercase chai-tracking-[0.08em] chai-m-0 chai-mb-8">
+									CDN
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-p-16 chai-rounded-8 chai-overflow-x-auto chai-m-0"><code>&lt;script src="https://cdn.jsdelivr.net/npm/@brewcodex/chai-css"&gt;&lt;/script&gt;
+
+&lt;div class="chai-p-16 chai-bg-[#111] chai-text-[#f5f5f5] chai-rounded-12"&gt;
+	Hello ChaiCSS
+&lt;/div&gt;</code></pre>
+							</div>
+						</section>
+						<!-- Typography -->
+						<div
+							id="typography"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								🎨 Typography Utilities
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								Text styling and font utilities. All numeric
+								values convert to REM (÷ 16).
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Utility
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold">
+											CSS Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold">
+											Example
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold">
+											Converts To
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>text</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid">
+											color
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-text-[#f5f5f5]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>color: #f5f5f5</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>fs</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											fontSize
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-fs-16</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>fontSize: 1rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>align</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											textAlign
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-align-center</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>textAlign: center</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>weight</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											fontWeight
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-weight-bold</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>fontWeight: bold</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>leading</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											lineHeight
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-leading-[1.5]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>lineHeight: 1.5</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>tracking</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											letterSpacing
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-tracking-[0.05em]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>letterSpacing: 0.05em</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>decoration</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											textDecorationLine
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-decoration-underline</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>textDecorationLine:
+												underline</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>style</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											fontStyle
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-style-italic</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>fontStyle: italic</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>transform</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											textTransform
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-transform-uppercase</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>textTransform: uppercase</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>transform</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											textTransform
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-transform-lowercase</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>textTransform: lowercase</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>transform</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											textTransform
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-transform-capitalize</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>textTransform: capitalize</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>family</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											fontFamily
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-family-[Arial]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>fontFamily: Arial</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8 chai-mt-16">
+								<p
+									class="chai-fs-14 chai-weight-bold chai-m-0 chai-mb-8">
+									Example:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;h2 class="chai-fs-26 chai-text-[#f5f5f5] chai-weight-bold"&gt;Heading&lt;/h2&gt;
+&lt;p class="chai-fs-14 chai-text-[#bb4d00] chai-align-center"&gt;Text&lt;/p&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Sizing -->
+						<div
+							id="sizing"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								📏 Sizing Utilities
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								Width, height, and constraint utilities. Numeric
+								values convert to REM, percentage suffix
+								converts to %.
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Utility
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											CSS Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Example
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Converts To
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>w</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											width
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-w-100</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>width: 6.25rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>h</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											height
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-h-100</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>height: 6.25rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>w (percent)</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											width
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-w-50p</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>width: 50%</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>h (viewport)</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											height
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-h-100vh</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>height: 100vh</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>min-w</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											minWidth
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-min-w-200</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>minWidth: 12.5rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>max-w</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											maxWidth
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-max-w-600</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>maxWidth: 37.5rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>min-h</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											minHeight
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-min-h-100</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>minHeight: 6.25rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>max-h</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											maxHeight
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-max-h-[300px]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>maxHeight: 300px</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8 chai-mt-16">
+								<p
+									class="chai-fs-14 chai-weight-bold chai-m-0 chai-mb-8">
+									Example:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-w-100p chai-h-100vh"&gt;Full screen&lt;/div&gt;
+&lt;img class="chai-w-80 chai-h-80" src="image.jpg" /&gt;
+&lt;div class="chai-max-w-600"&gt;Max width container&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Layout -->
+						<div
+							id="layout"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								📐 Layout Utilities
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								Display, positioning, overflow, and visibility
+								utilities.
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Utility
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											CSS Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Example
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Converts To
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>display</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											display
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-display-flex</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>display: flex</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>pos</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											position
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-pos-absolute</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>position: absolute</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>top</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											top
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-top-[20px]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>top: 20px</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>right</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											right
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-right-0</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>right: 0</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>bottom</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											bottom
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-bottom-16</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>bottom: 1rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>left</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											left
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-left-0</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>left: 0</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>z</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											zIndex
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-z-50</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>zIndex: 50</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>overflow</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											overflow
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-overflow-hidden</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>overflow: hidden</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>visibility</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											visibility
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-visibility-visible</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>visibility: visible</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>overflow-x</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											overflowX
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-overflow-x-auto</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>overflowX: auto</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>overflow-y</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											overflowY
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-overflow-y-auto</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>overflowY: auto</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>object</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											objectFit
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-object-cover</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>objectFit: cover</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8 chai-mt-16">
+								<p
+									class="chai-fs-14 chai-weight-bold chai-m-0 chai-mb-8">
+									Example:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-display-flex chai-pos-relative"&gt;Flex container&lt;/div&gt;
+&lt;div class="chai-pos-absolute chai-top-0 chai-left-0 chai-z-10"&gt;Positioned&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Spacing -->
+						<div
+							id="spacing"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								📦 Spacing Utilities
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								Padding and margin utilities with directional
+								control. All numeric values convert to REM.
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Utility
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											CSS Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Example
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Converts To
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											rowspan="7"
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<strong>Padding</strong>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>p</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											padding
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-p-16</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>padding: 1rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>pt</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											paddingBlockStart
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-pt-8</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>paddingBlockStart: 0.5rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>pb</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											paddingBlockEnd
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-pb-8</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>paddingBlockEnd: 0.5rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>px</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											paddingInline
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-px-16</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>paddingInline: 1rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>py</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											paddingBlock
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-py-12</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>paddingBlock: 0.75rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>pl</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											paddingInlineStart
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-pl-12</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>paddingInlineStart:
+												0.75rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>pr</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											paddingInlineEnd
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-pr-12</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>paddingInlineEnd: 0.75rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											rowspan="7"
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<strong>Margin</strong>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>m</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											margin
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-m-16</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>margin: 1rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>mt</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											marginBlockStart
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-mt-8</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>marginBlockStart: 0.5rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>mb</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											marginBlockEnd
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-mb-8</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>marginBlockEnd: 0.5rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>mx</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											marginInline
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-mx-auto</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>marginInline: auto</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>my</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											marginBlock
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-my-16</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>marginBlock: 1rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>ml</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											marginInlineStart
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-ml-12</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>marginInlineStart:
+												0.75rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>mr</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											marginInlineEnd
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-mr-12</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>marginInlineEnd: 0.75rem</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8 chai-mt-16">
+								<p
+									class="chai-fs-14 chai-weight-bold chai-m-0 chai-mb-8">
+									Example:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-p-32"&gt;Padding all sides: 2rem&lt;/div&gt;
+&lt;div class="chai-py-16 chai-px-24"&gt;Vertical 1rem, Horizontal 1.5rem&lt;/div&gt;
+&lt;div class="chai-m-auto"&gt;Centered with auto margin&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Background -->
+						<div
+							id="background"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								🎨 Background Utilities
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								Background color utilities with hex color
+								support.
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Utility
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											CSS Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Example
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Converts To
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>bg</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											backgroundColor
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-bg-[#0a0a0a]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>backgroundColor: #1a1a1a</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8 chai-mt-16">
+								<p
+									class="chai-fs-14 chai-weight-bold chai-m-0 chai-mb-8">
+									Example:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-bg-[#0a0a0a]"&gt;Dark background&lt;/div&gt;
+&lt;div class="chai-bg-[#bb4d00]"&gt;Primary background&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Border -->
+						<div
+							id="border"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								🔲 Border Utilities
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								Border width, color, style, and radius
+								utilities.
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Utility
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											CSS Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Example
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Converts To
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>bw</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											borderWidth
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-bw-1</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>borderWidth: 0.0625rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>bc</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											borderColor
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-bc-[#ccc]</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>borderColor: #ccc</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>bs</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											borderStyle
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-bs-solid</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>borderStyle: solid</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>rounded</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											borderRadius
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-rounded-8</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>borderRadius: 0.5rem</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>rounded (percent)</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											borderRadius
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-rounded-50p</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>borderRadius: 50%</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>border-collapse</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											borderCollapse
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-border-collapse</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>borderCollapse: collapse</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8 chai-mt-16">
+								<p
+									class="chai-fs-14 chai-weight-bold chai-m-0 chai-mb-8">
+									Example:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-bw-1 chai-bc-[#ccc] chai-bs-solid chai-rounded-8"&gt;
+  Bordered box
+&lt;/div&gt;
+&lt;div class="chai-rounded-50p"&gt;Circle&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Flexbox -->
+						<div
+							id="flexbox"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								🔄 Flexbox Utilities
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								Direction, alignment, sizing, and spacing
+								utilities for flexbox layouts.
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Category
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Utility
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											CSS Property
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Example
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Value
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											rowspan="5"
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<strong
+												>Direction & Wrapping</strong
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>flex-row</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flexDirection
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-flex-row</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>row</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>flex-col</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flexDirection
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-flex-col</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>column</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>flex-row</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flexDirection
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-flex-row-reverse</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>row-reverse</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>flex-col</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flexDirection
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-flex-col-reverse</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>column-reverse</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>wrap</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flexWrap
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-wrap-wrap</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>wrap</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											rowspan="3"
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<strong>Alignment</strong>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>justify</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											justifyContent
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-justify-center</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>center</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>items</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											alignItems
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-items-center</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>center</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>self</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											alignSelf
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-self-end</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>end</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											rowspan="4"
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<strong>Sizing</strong>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>flex</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flex
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-flex-1</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>1</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>grow</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flexGrow
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-grow-1</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>1</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>shrink</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											flexShrink
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-shrink-0</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>0</code
+											>
+										</td>
+									</tr>
+
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>gap</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											gap
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-gap-16</code
+											>
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>1rem</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div
+								class="chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8 chai-mt-16">
+								<p
+									class="chai-fs-14 chai-weight-bold chai-m-0 chai-mb-8">
+									Examples:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;!-- Centered flex row --&gt;
+&lt;div class="chai-display-flex chai-flex-row chai-gap-16 chai-justify-center chai-items-center"&gt;
+  &lt;div class="chai-flex-1"&gt;Item 1&lt;/div&gt;
+  &lt;div class="chai-flex-1"&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Flex column --&gt;
+&lt;div class="chai-display-flex chai-flex-col chai-gap-8"&gt;
+  &lt;div&gt;Header&lt;/div&gt;
+  &lt;div&gt;Content&lt;/div&gt;
+  &lt;div&gt;Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Value Formatting -->
+						<div
+							id="value-formatting"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								🎯 Value Formatting System
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								The Chai engine automatically converts values
+								based on their format.
+							</p>
+
+							<div class="chai-mb-24">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+									🔢 Numeric Values → REM Conversion
+								</h3>
+								<p
+									class="chai-fs-14 chai-text-[#bb4d00] chai-mb-12">
+									Numeric values divide by 16 (base scale).
+								</p>
+								<table
+									class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+									<thead>
+										<tr>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Format
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Example
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Calculation
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Result
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Numeric
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-p-32</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												32 ÷ 16
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>padding: 2rem</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Numeric
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-fs-24</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												24 ÷ 16
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>fontSize: 1.5rem</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Numeric
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-gap-16</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												16 ÷ 16
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>gap: 1rem</code
+												>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="chai-mb-24">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+									📊 Percentage Suffix (p)
+								</h3>
+								<p
+									class="chai-fs-14 chai-text-[#bb4d00] chai-mb-12">
+									Values ending with 'p' convert to
+									percentage.
+								</p>
+								<table
+									class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+									<thead>
+										<tr>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Format
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Example
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Result
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Percentage
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-w-50p</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>width: 50%</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Percentage
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-h-100p</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>height: 100%</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Percentage
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-rounded-50p</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>borderRadius: 50%</code
+												>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="chai-mb-24">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+									📱 Viewport Units (vh/vw)
+								</h3>
+								<p
+									class="chai-fs-14 chai-text-[#bb4d00] chai-mb-12">
+									Viewport units pass through unchanged.
+								</p>
+								<table
+									class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+									<thead>
+										<tr>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Format
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Example
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Result
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Viewport
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-h-100vh</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>height: 100vh</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Viewport
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-w-50vw</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>width: 50vw</code
+												>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="chai-mb-24">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+									🎨 Hex Colors (brackets)
+								</h3>
+								<p
+									class="chai-fs-14 chai-text-[#bb4d00] chai-mb-12">
+									Hex colors in brackets get brackets
+									stripped.
+								</p>
+								<table
+									class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+									<thead>
+										<tr>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Format
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Example
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Result
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Hex Color
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-bg-[#0a0a0a]</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>backgroundColor:
+													#1a1a1a</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Hex Color
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-text-[#f5f5f5]</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>color: #f5f5f5</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Hex Color
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-bc-[#ccc]</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>borderColor: #ccc</code
+												>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="chai-mb-24">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+									📦 Custom Values (brackets)
+								</h3>
+								<p
+									class="chai-fs-14 chai-text-[#bb4d00] chai-mb-12">
+									Any custom value in brackets passes through
+									as-is with brackets stripped.
+								</p>
+								<table
+									class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+									<thead>
+										<tr>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Format
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Example
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Result
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Custom
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-min-w-[300px]</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>minWidth: 300px</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Custom
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-p-[1.5em]</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>padding: 1.5em</code
+												>
+											</td>
+										</tr>
+										<!-- <tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Custom
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-top-[calc(100%-20px)]</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>top: calc(100%-20px)</code
+												>
+											</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+
+							<div>
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+									🏷️ String Keywords
+								</h3>
+								<p
+									class="chai-fs-14 chai-text-[#bb4d00] chai-mb-12">
+									String values pass through unchanged.
+								</p>
+								<table
+									class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+									<thead>
+										<tr>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Format
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Example
+											</th>
+											<th
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+												Result
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Keyword
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-display-flex</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>display: flex</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Keyword
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-items-center</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>alignItems: center</code
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												Keyword
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>chai-m-auto</code
+												>
+											</td>
+											<td
+												class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+												<code
+													class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+													>margin: auto</code
+												>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<!-- REM Scale -->
+						<div
+							id="rem-scale"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+								📊 REM Scale Reference
+							</h2>
+							<p
+								class="chai-fs-14 chai-text-[#bb4d00] chai-mb-16">
+								All numeric values use 16px base scale with
+								automatic REM conversion.
+							</p>
+							<table
+								class="chai-w-100p chai-mx-0 chai-my-24 chai-border-collapse">
+								<thead>
+									<tr>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Numeric Value
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											REM Unit
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Pixels
+										</th>
+										<th
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-bg-[#1a1a1a] chai-text-[#f5f5f5] chai-weight-bold chai-p-12 chai-align-left">
+											Example Usage
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											4
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											0.25rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											4px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-gap-4</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											8
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											0.5rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											8px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-p-8</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											12
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											0.75rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											12px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-pl-12</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											16
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											1rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											16px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-fs-16</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											24
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											1.5rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											24px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-m-24</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											32
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											2rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											32px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-p-32</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											48
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											3rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											48px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-gap-48</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											64
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											4rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											64px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-p-64</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											80
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											5rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											80px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-w-80</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											96
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											6rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											96px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-h-96</code
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											100
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											6.25rem
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											100px
+										</td>
+										<td
+											class="chai-bw-1 chai-bc-[#333] chai-bs-solid chai-p-12">
+											<code
+												class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4"
+												>chai-w-100</code
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Examples -->
+						<div
+							id="examples"
+							class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-mb-32 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-24">
+								🚀 Live Rendered Examples
+							</h2>
+
+							<!-- Example 1: Card Component -->
+							<div class="chai-mb-32">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+									Example 1: Card Component
+								</h3>
+
+								<!-- Live Render -->
+								<div
+									class="chai-mb-16 chai-p-16 chai-bg-[#0a0a0a] chai-rounded-8">
+									<div
+										class="chai-bg-[#111] chai-p-32 chai-rounded-16 chai-display-flex chai-flex-col chai-gap-16 chai-bw-1 chai-bc-[#333] chai-bs-solid chai-max-w-400">
+										<h2
+											class="chai-fs-24 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-visibility-visible">
+											Card Title
+										</h2>
+										<p
+											class="chai-fs-14 chai-text-[#bb4d00] chai-m-0 chai-leading-[1.6]">
+											This is a card component built
+											entirely with Chai utilities,
+											showing proper spacing, typography,
+											and layout.
+										</p>
+										<button
+											class="chai-bg-[#000] chai-text-white chai-p-12 chai-rounded-12 chai-fs-14 chai-weight-bold chai-bw-0">
+											Action Button
+										</button>
+									</div>
+								</div>
+
+								<!-- Code -->
+								<p
+									class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+									Code:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-bg-[#111] chai-p-32 chai-rounded-16 chai-display-flex chai-flex-col chai-gap-16"&gt;
+  &lt;h2 class="chai-fs-24 chai-weight-bold chai-text-[#f5f5f5] chai-m-0"&gt;
+    Card Title
+  &lt;/h2&gt;
+  &lt;p class="chai-fs-14 chai-text-[#bb4d00] chai-m-0"&gt;
+    Card description
+  &lt;/p&gt;
+  &lt;button class="chai-bg-[#000] chai-text-white chai-p-12 chai-rounded-12"&gt;
+    Action Button
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+							</div>
+
+							<!-- Example 2: Two-Column Layout -->
+							<div class="chai-mb-32">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+									Example 2: Two-Column Layout
+								</h3>
+
+								<!-- Live Render -->
+								<div
+									class="chai-mb-16 chai-p-16 chai-bg-[#0a0a0a] chai-rounded-8">
+									<div
+										class="chai-display-flex chai-flex-row chai-gap-24 chai-justify-center">
+										<div
+											class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-bw-1 chai-bc-[#333] chai-bs-solid chai-w-300">
+											<h3
+												class="chai-fs-18 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+												Left Column
+											</h3>
+											<p
+												class="chai-fs-14 chai-text-[#bb4d00] chai-m-0">
+												Content for the left column with
+												proper spacing and typography.
+											</p>
+										</div>
+										<div
+											class="chai-bg-[#111] chai-p-24 chai-rounded-12 chai-bw-1 chai-bc-[#333] chai-bs-solid chai-w-300">
+											<h3
+												class="chai-fs-18 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-12">
+												Right Column
+											</h3>
+											<p
+												class="chai-fs-14 chai-text-[#bb4d00] chai-m-0">
+												Content for the right column
+												with matching layout and
+												styling.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Code -->
+								<p
+									class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+									Code:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-display-flex chai-flex-row chai-gap-24"&gt;
+  &lt;div class="chai-w-300 chai-bg-[#111] chai-p-24 chai-rounded-12"&gt;
+    Left column
+  &lt;/div&gt;
+  &lt;div class="chai-w-300 chai-bg-[#111] chai-p-24 chai-rounded-12"&gt;
+    Right column
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							</div>
+
+							<!-- Example 3: Typography Showcase -->
+							<div class="chai-mb-32">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+									Example 3: Typography Showcase
+								</h3>
+
+								<!-- Live Render -->
+								<div
+									class="chai-mb-16 chai-p-24 chai-bg-[#111] chai-rounded-8 chai-bw-1 chai-bc-[#333] chai-bs-solid">
+									<h1
+										class="chai-fs-48 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-8">
+										Heading Large (fs-48)
+									</h1>
+									<h2
+										class="chai-fs-32 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-8">
+										Heading Medium (fs-32)
+									</h2>
+									<h3
+										class="chai-fs-24 chai-weight-bold chai-text-[#bb4d00] chai-m-0 chai-mb-12">
+										Heading Small (fs-24)
+									</h3>
+									<p
+										class="chai-fs-16 chai-text-[#f5f5f5] chai-m-0 chai-mb-8 chai-leading-[1.8]">
+										This is a regular paragraph with font
+										size 16. It has proper line height and
+										spacing for readability.
+									</p>
+									<p
+										class="chai-fs-14 chai-text-[#bb4d00] chai-m-0 chai-mb-8">
+										This is a smaller paragraph with font
+										size 14, often used for secondary text
+										or descriptions.
+									</p>
+									<p
+										class="chai-fs-12 chai-text-[#bb4d00] chai-m-0">
+										This is small text with font size 12,
+										perfect for captions or metadata.
+									</p>
+									<div
+										class="chai-mt-16 chai-display-flex chai-gap-16 chai-items-center chai-flex-wrap">
+										<span
+											class="chai-fs-14 chai-weight-bold chai-text-[#f5f5f5]">
+											Bold Text
+										</span>
+										<span
+											class="chai-fs-14 chai-style-italic chai-text-[#bb4d00]">
+											Italic Text
+										</span>
+										<span
+											class="chai-fs-14 chai-decoration-underline chai-text-[#f5f5f5]">
+											Underlined Text
+										</span>
+										<span
+											class="chai-fs-14 chai-transform-uppercase chai-text-[#bb4d00]">
+											Uppercase Text
+										</span>
+									</div>
+								</div>
+
+								<!-- Code -->
+								<p
+									class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+									Code:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;h1 class="chai-fs-48 chai-weight-bold"&gt;Heading Large&lt;/h1&gt;
+&lt;p class="chai-fs-16 chai-text-[#f5f5f5]"&gt;Regular paragraph&lt;/p&gt;
+&lt;span class="chai-weight-bold chai-style-italic chai-decoration-underline"&gt;
+  Styled text
+&lt;/span&gt;</code></pre>
+							</div>
+
+							<!-- Example 4: Flexbox Layout -->
+							<div class="chai-mb-32">
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+									Example 4: Flexbox Layout & Alignment
+								</h3>
+
+								<!-- Live Render -->
+								<div
+									class="chai-mb-16 chai-p-16 chai-bg-[#0a0a0a] chai-rounded-8">
+									<div
+										class="chai-bg-[#111] chai-p-16 chai-rounded-12 chai-mb-16">
+										<p
+											class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+											justify-center, items-center:
+										</p>
+										<div
+											class="chai-display-flex chai-justify-center chai-items-center chai-gap-12 chai-bg-[#0a0a0a] chai-p-24 chai-rounded-8 chai-min-h-[150px]">
+											<div
+												class="chai-bg-[#bb4d00] chai-text-white chai-p-16 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Item 1
+											</div>
+											<div
+												class="chai-bg-[#d4a574] chai-text-white chai-p-16 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Item 2
+											</div>
+											<div
+												class="chai-bg-[#000] chai-text-white chai-p-16 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Item 3
+											</div>
+										</div>
+									</div>
+
+									<div
+										class="chai-bg-[#111] chai-p-16 chai-rounded-12 chai-mb-16">
+										<p
+											class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+											justify-between, items-center:
+										</p>
+										<div
+											class="chai-display-flex chai-justify-space-between chai-items-center chai-gap-12 chai-bg-[#0a0a0a] chai-p-24 chai-rounded-8">
+											<div
+												class="chai-bg-[#bb4d00] chai-text-white chai-p-12 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Left
+											</div>
+											<div
+												class="chai-bg-[#d4a574] chai-text-white chai-p-12 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Center
+											</div>
+											<div
+												class="chai-bg-[#000] chai-text-white chai-p-12 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Right
+											</div>
+										</div>
+									</div>
+
+									<div
+										class="chai-bg-[#111] chai-p-16 chai-rounded-12">
+										<p
+											class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+											flex-col, gap-8:
+										</p>
+										<div
+											class="chai-display-flex chai-flex-col chai-gap-8 chai-bg-[#0a0a0a] chai-p-16 chai-rounded-8">
+											<div
+												class="chai-bg-[#bb4d00] chai-text-white chai-p-12 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Item 1
+											</div>
+											<div
+												class="chai-bg-[#d4a574] chai-text-white chai-p-12 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Item 2
+											</div>
+											<div
+												class="chai-bg-[#000] chai-text-white chai-p-12 chai-rounded-8 chai-fs-14 chai-weight-bold">
+												Item 3
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Code -->
+								<p
+									class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+									Code:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-display-flex chai-justify-center chai-items-center chai-gap-12"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							</div>
+
+							<!-- Example 5: Sizing & Spacing Demo -->
+							<div>
+								<h3
+									class="chai-fs-20 chai-weight-bold chai-text-[#f5f5f5] chai-m-0 chai-mb-16">
+									Example 5: Sizing & Dimensions
+								</h3>
+
+								<!-- Live Render -->
+								<div
+									class="chai-mb-16 chai-p-16 chai-bg-[#0a0a0a] chai-rounded-8">
+									<div
+										class="chai-display-flex chai-flex-row chai-gap-24 chai-flex-wrap chai-justify-center">
+										<div
+											class="chai-display-flex chai-flex-col chai-gap-8 chai-items-center">
+											<div
+												class="chai-w-60 chai-h-60 chai-bg-[#bb4d00] chai-rounded-8 chai-display-flex chai-align-center chai-justify-center chai-text-white chai-fs-12 chai-weight-bold">
+												60×60
+											</div>
+											<p
+												class="chai-fs-12 chai-text-[#bb4d00] chai-m-0">
+												Small
+											</p>
+										</div>
+
+										<div
+											class="chai-display-flex chai-flex-col chai-gap-8 chai-items-center">
+											<div
+												class="chai-w-80 chai-h-80 chai-bg-[#d4a574] chai-rounded-8 chai-display-flex chai-align-center chai-justify-center chai-text-white chai-fs-12 chai-weight-bold">
+												80×80
+											</div>
+											<p
+												class="chai-fs-12 chai-text-[#bb4d00] chai-m-0">
+												Medium
+											</p>
+										</div>
+
+										<div
+											class="chai-display-flex chai-flex-col chai-gap-8 chai-items-center">
+											<div
+												class="chai-w-100 chai-h-100 chai-bg-[#000] chai-rounded-8 chai-display-flex chai-align-center chai-justify-center chai-text-white chai-fs-12 chai-weight-bold">
+												100×100
+											</div>
+											<p
+												class="chai-fs-12 chai-text-[#bb4d00] chai-m-0">
+												Large
+											</p>
+										</div>
+
+										<div
+											class="chai-display-flex chai-flex-col chai-gap-8 chai-items-center">
+											<div
+												class="chai-w-50p chai-h-80 chai-bg-[#bb4d00] chai-rounded-8 chai-display-flex chai-align-center chai-justify-center chai-text-white chai-fs-12 chai-weight-bold">
+												50%×80
+											</div>
+											<p
+												class="chai-fs-12 chai-text-[#bb4d00] chai-m-0">
+												Responsive
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Code -->
+								<p
+									class="chai-fs-12 chai-text-[#bb4d00] chai-weight-bold chai-m-0 chai-mb-8">
+									Code:
+								</p>
+								<pre
+									class="chai-bg-[#262626] chai-p-16 chai-rounded-8 chai-overflow-x-auto"><code class="chai-bg-[#262626] chai-text-[#e5e5e5] chai-px-8 chai-py-4 chai-rounded-4">&lt;div class="chai-w-80 chai-h-80 chai-bg-[#d4a574] chai-rounded-8"&gt;
+  80×80 Box
+&lt;/div&gt;
+
+&lt;div class="chai-w-50p chai-h-80 chai-bg-[#bb4d00]"&gt;
+  Responsive width
+&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+
+						<!-- Summary -->
+						<div
+							class="chai-bg-gradient chai-p-32 chai-rounded-12 chai-text-[#bb4d00]">
+							<h2
+								class="chai-fs-28 chai-weight-bold chai-m-0 chai-mb-16">
+								✨ Summary
+							</h2>
+							<div
+								class="chai-display-flex chai-flex-col chai-gap-16">
+								<div>
+									<p
+										class="chai-fs-14 chai-weight-bold chai-m-0">
+										📊 Statistics
+									</p>
+									<p class="chai-fs-14 chai-m-0 chai-mt-4">
+										• 70+ Total Utilities • 7 Categories •
+										40+ CSS Properties
+									</p>
+								</div>
+								<div>
+									<p
+										class="chai-fs-14 chai-weight-bold chai-m-0">
+										🎨 Categories
+									</p>
+									<p class="chai-fs-14 chai-m-0 chai-mt-4">
+										Typography • Sizing • Layout • Spacing •
+										Background • Border • Flexbox
+									</p>
+								</div>
+								<div>
+									<p
+										class="chai-fs-14 chai-weight-bold chai-m-0">
+										🚀 Key Features
+									</p>
+									<p class="chai-fs-14 chai-m-0 chai-mt-4">
+										✅ Auto REM Scaling ✅ Smart Value
+										Parsing ✅ Hex Color Support ✅
+										Responsive-First
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<!-- <script
+			type="module"
+			src="/src/main.js"></script> -->
+		<!-- Chai CSS -->
+		<script src="https://cdn.jsdelivr.net/npm/@brewcodex/chai-css"></script>
+	</body>
+</html>

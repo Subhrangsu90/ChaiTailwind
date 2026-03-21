@@ -15,18 +15,20 @@
 	],
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build && vite build --config vite.docs.config.js",
 		"preview": "vite preview",
 		"prepublishOnly": "npm run build"
 	},
-"keywords": [
-    "brewcodex",
-    "css",
-    "utility",
-    "tailwind",
-    "utility-first",
-    "styling"
-  ],
+	"keywords": [
+		"css",
+		"utility-first",
+		"tailwind-alternative",
+		"css-engine",
+		"atomic-css",
+		"frontend",
+		"brewcodex",
+		"chai-css"
+	],
 	"license": "MIT",
 	"devDependencies": {
 		"vite": "^8.0.1"

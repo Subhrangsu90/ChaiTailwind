@@ -17,12 +17,12 @@ export const isViewport = (str) => {
 
 // Check if a value is a percentage shorthand: "50p" -> true
 export const isPercentage = (str) => {
-	return typeof str === "string" && str.endsWith("p");
+	return typeof str === "string" && /^\d+p$/.test(str);
 };
 
 // 4. Convert "50p" to "50%"
 export const toPercentage = (str) => {
-	return str.replace("p", "%");
+	return str.replace(/p$/, "%");
 };
 
 // Check if it's a Hex color
