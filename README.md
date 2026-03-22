@@ -1,4 +1,4 @@
-# Chai Tailwind - Utility-First CSS Engine
+# ChaiCSS - Utility-First CSS Engine
 
 A lightweight utility-first CSS engine that provides shorthand class names mapped to CSS properties. **16px base scale** with automatic REM conversion for responsive, accessible design.
 
@@ -35,7 +35,7 @@ The script auto-initializes when the DOM is ready. Exposes `window.ChaiTailwind`
 
 ## 📚 Complete Utilities Documentation
 
-### 1. 🎨 **TYPOGRAPHY** (`typography.js`)
+### 1. 🎨 **TYPOGRAPHY**
 
 Text styling and font utilities. Use `chai-` prefix with any of these properties.
 
@@ -72,7 +72,7 @@ Text styling and font utilities. Use `chai-` prefix with any of these properties
 
 ---
 
-### 2. 📏 **SIZING** (`sizing.js`)
+### 2. 📏 **SIZING**
 
 Dimension utilities for width, height, and constraints.
 
@@ -104,7 +104,7 @@ Dimension utilities for width, height, and constraints.
 
 ---
 
-### 3. 📐 **LAYOUT** (`layout.js`)
+### 3. 📐 **LAYOUT**
 
 Display, positioning, and visibility utilities for page layout and component positioning.
 
@@ -142,7 +142,7 @@ Display, positioning, and visibility utilities for page layout and component pos
 
 ---
 
-### 4. 📦 **SPACING** (`spacing.js`)
+### 4. 📦 **SPACING**
 
 Padding and margin utilities with directional control.
 
@@ -187,7 +187,7 @@ Padding and margin utilities with directional control.
 
 ---
 
-### 5. 🎨 **BACKGROUND** (`background.js`)
+### 5. 🎨 **BACKGROUND**
 
 Background color utilities with hex color support.
 
@@ -209,7 +209,7 @@ Background color utilities with hex color support.
 
 ---
 
-### 6. 🔲 **BORDER** (`border.js`)
+### 6. 🔲 **BORDER**
 
 Border styling utilities for width, color, style, and radius.
 
@@ -240,7 +240,7 @@ Border styling utilities for width, color, style, and radius.
 
 ---
 
-### 7. 🔄 **FLEXBOX** (`flex_grid.js`)
+### 7. 🔄 **FLEXBOX**
 
 Flex layout utilities for alignment, direction, sizing, and spacing.
 
